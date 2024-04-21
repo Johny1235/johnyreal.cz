@@ -1,0 +1,69 @@
+* {
+    font-family: "Jersey 10", sans-serif;
+    color: azure;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+input {
+    position: relative;
+    top: 0.8em;
+    left: 2.5em;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+    opacity: 1;
+    background-color: rgb(128, 0, 0);
+    border: 20px solid gray;
+    border-radius: 15px;
+    font-size: 200px;
+    text-align: center;
+}
+
+input:hover {
+    color: greenyellow;
+}
+
+#obrazek {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.9)), url("../multimedia/drive.jpg");
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: 100% 250rem;
+    min-width: 100%;
+}
+button 
+{
+    background-color: black;
+    position: relative;
+    left: 2.5em;
+    height: 100px;
+    width: 500px;
+    font-size: 100px;
+}
+button:hover
+{
+    background-color: white;
+    color: black;
+}
+.cislo
+{
+    display: block;
+    left: 25%;
+    top: 30%;
+    max-width: 100%;
+    max-height: 100%;
+    width: 200px;
+    font-size: 1000%;
+    text-align: center;
+}
+p {
+    margin: auto 0;
+    left: 1em;
+}
