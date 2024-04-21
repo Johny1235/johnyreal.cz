@@ -1,22 +1,38 @@
 #telicko
 {
     color: gainsboro;
+    background-color: black;
 }
-
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    position: static;
     font-family: "Jersey 10", sans-serif;
     color: forestgreen;
     text-align: justify;
     opacity: 2;
-    text-shadow: 1px;
     z-index: -1000;
+}
+#text
+{
+    display: block;
+    flex-direction: column;
+    align-items: baseline;
+    min-width: 100%;
+}
+video
+{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    min-width: 100%;
+    min-height: 100%;
 }
 .videoback
 {
+    overflow: hidden;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -31,17 +47,23 @@
 
 .back-video
 {
+    overflow: hidden;
     position: absolute;
     right: 0;
     bottom: 0;
     opacity: 0.5;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
-.jersey-10-regular {
+.jersey-10-regular 
+{
     margin: 0;
+    padding: 0;
+    position: fixed;
     font-family: "Jersey 10", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -59,10 +81,13 @@ footer
     margin: 0;
     padding: 0;
     overflow: hidden;
+    text-align: center;
+    position: fixed;
 }
 h1
 {
-    
+    display: inline-block;
+    overflow: hidden;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -73,8 +98,51 @@ h1
     text-shadow: 1px;
     z-index: -1000;
     display: block;
-    font-size: 10em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    font-size: 12.5em;
+    top: 10px;
+    margin-inline-start: 100px;
+    margin-inline-end: 100px;
     font-weight: bold;
+}
+ul, li
+{
+    font-size: 2em;
+    top: 20px;
+    list-style: none;
+}
+.zbrane
+{
+    margin-inline-start: 100px;
+}
+li 
+{
+    font-size: 1em;
+    right: 100px;
+    margin-inline-start: 100px;
+}
+li:hover
+{
+    color: darkgrey;
+}
+a 
+{
+    text-decoration: none;
+}
+a:hover
+{
+    color: darkgrey;
+}
+#prvni
+{
+    font-size: 1.5em;
+    margin-inline-start: 120px;
+}
+#vice
+{
+    font-size: 1em;
+    margin-inline-start: 100px;
+}
+#vice:hover
+{
+    color: forestgreen;
 }
