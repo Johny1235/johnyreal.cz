@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
@@ -10,6 +10,38 @@
     <title>balistics.</title>
 </head>
 <body>
-    
+    <div class="hodnoty">
+        <p>Hmotnost m:</p>
+        <input id="hmotnost" type="number" min="0" step="any">
+        <p>Součinitel odporu prostředí C:</p>
+        <input id="odpor" type="number" min="0" step="any">
+        <p>Plocha průřezu střely S:</p>
+        <input id="plocha" type="number" min="0" step="any">
+        <p>Hustota vzduchu ρ:</p>
+        <input id="hustota" type="number" min="0" step="any">
+        <p>Rychlost střely v:</p>
+        <input id="rychlost" type="number" min="0" step="any">
+        <div class="sila">
+            <p id="f">F [N]</p>
+            <button id="rovnitko" onclick="vypocet()">=</button>
+            <br><input type="text" id="suma" readonly>
+        </div>
+    </div>
+    <div class="popis">
+        <h1>Balistická křivka.</h1>
+        <h2>Co to je?</h2>
+        <h3>Balistická křivka je rovinná křivka, kterou opisuje těleso, vystřelené blízko zemského povrchu, obvykle směrem šikmo vzhůru.</h3>
+        <h2>Z čeho jsme vyšli?</h2>
+        <h3>Výsledná síla F ("křivka") se vypočítá jako: F = Fg + Fod, kde Fg je gravitační síla, a Fod je síla odporu vzduchu.</h3>
+        <h3>Fg je v podstatě desetinásobek hmotnosti. Fod vychází z Newtonova odporového zákona, jež zní: Fod = 1/2 · C · S · ρ · v^2</h3>
+        <h2>Jaké dosadit hodnoty?</h2>
+        <h3>• Hmotnost: Dosaďte hmostnost náboje v kilogramech</h3>
+        <h3>• Součinitel odporu prostředí: Obvykle má hodnoty v intervalu zhruba (0;3). Závisí na tvaru tělesa.</h3>
+        <h3>• Plocha: Dosaďte v metrech</h3>
+        <h3>• Hustota vzduchu: Hustota vzduchu je obvykle 1,25 kg/m3. Nemusí však nutně být (nadm. výška,...)</h3>
+        <h3>• Rychlost střely: Dosaďte v m/s</h3>
+        <s></s></h3>
+    </div>
+    <script src="../javascript/krivka.js"></script>
 </body>
 </html>
