@@ -1,4 +1,4 @@
 Johny's website (real.)
 -----------
-*BETA* verze mé první (veřejné) webové stránky. Nic víc, i guess.
+*Version 1.0 online!*
 (THIS WEBSITE IS ONLY IN CZECH LANGUAGE!)
