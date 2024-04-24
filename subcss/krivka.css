@@ -13,14 +13,14 @@ body
 .hodnoty
 {
     color: cornflowerblue;
-    font-size: 1.8em;
+    font-size: 1.75em;
 }
 button, input 
 {
     color: red;
     background-color: darkslategray;
     font-family: "Jersey 10", sans-serif;
-    font-size: 1em;
+    font-size: 2em;
     margin: 0.1em;
     width: 60%; 
     max-width: 300px; 
@@ -40,5 +40,5 @@ h2
 }
 .popis
 {
-    font-size: 2.2em;
+    font-size: 2em;
 }
