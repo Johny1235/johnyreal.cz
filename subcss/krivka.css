@@ -27,7 +27,7 @@ button, input
 }
 #f
 {
-    font-size: 5em;
+    font-size: 3em;
 }
 #rovnitko
 {
@@ -37,4 +37,8 @@ button, input
 h2
 {
     text-decoration: underline;
+}
+.popis
+{
+    font-size: 2.2em;
 }
