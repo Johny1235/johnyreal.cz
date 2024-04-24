@@ -19,14 +19,14 @@ button, input
     color: red;
     background-color: darkslategray;
     font-family: "Jersey 10", sans-serif;
-    font-size: 2em;
+    font-size: 4em;
     margin: 0.1em;
     width: 60%; 
     max-width: 300px; 
 }
 #f
 {
-    font-size: 3em;
+    font-size: 6em;
 }
 #rovnitko
 {
