@@ -13,20 +13,21 @@ body
 .hodnoty
 {
     color: cornflowerblue;
+    font-size: 3em;
 }
 button, input 
 {
     color: red;
     background-color: darkslategray;
     font-family: "Jersey 10", sans-serif;
-    font-size: 4em;
+    font-size: 3em;
     margin: 0.1em;
     width: 60%; 
     max-width: 300px; 
 }
 #f
 {
-    font-size: 6em;
+    font-size: 5em;
 }
 #rovnitko
 {
