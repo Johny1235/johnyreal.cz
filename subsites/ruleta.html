@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../multimedia/ryan.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../subcss/ruleta.css">
+    <title>russian roulette.</title>
+</head>
+<body>
+    <audio autoplay loop src="../multimedia/the neighbourhood - softcore  ultra slowed  reverb.mp3"></audio>
+    <div class="container">
+        <h1>Ruská ruleta</h1>
+        <label for="bullets">Vyberte počet nábojů, roztočte a střelte:</label>
+        <select id="bullets">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+        <button id="spin">Roztoč revolver</button>
+        <button id="shoot" disabled>Střel!</button>
+        <div id="revolver-container">
+            <div id="revolver"></div>
+        </div>
+        <p id="result"></p>
+    </div>
+    <script src="../javascript/ruleta.js"></script>
+</body>
+</html>
