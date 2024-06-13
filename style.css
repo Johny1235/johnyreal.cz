@@ -112,6 +112,13 @@ footer
     left: -5em;
     font-size: 0.5em;
 }
+#ruleta
+{
+    position: relative;
+    z-index: 1;
+    left: -5em;
+    font-size: 0.5em;
+}
 li:hover
 {
     color: darkgrey;
