@@ -1,0 +1,90 @@
+body {
+    font-family: "Jersey 10", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+    color: whitesmoke;
+}
+h1
+{
+    color: red;
+    font-size: 5em;
+}
+.container {
+    text-align: center;
+    background: #585353;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+}
+
+label {
+    display: block;
+    margin: 10px 100px;
+    font-size: 2em;
+}
+
+select {
+    margin-bottom: 20px;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #0056b3;
+    color: aliceblue;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 2em;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    font-family: "Jersey 10", sans-serif;
+    color: white;
+    font-size: 1.5em;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #ccc;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+#revolver-container {
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+#revolver {
+    width: 100px;
+    height: 100px;
+    background: url('../multimedia/cylinder.png') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    z-index: 0;
+}
+
+.rotate {
+    animation: spin 0.15s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+p {
+    font-size: 1.8em;
+    margin-top: 20px;
+}
