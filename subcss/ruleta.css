@@ -69,7 +69,7 @@ button:hover:not(:disabled) {
 #revolver {
     width: 100px;
     height: 100px;
-    background: url('../multimedia/cylinder.png') no-repeat center center;
+    background: url('/cylinder.png') no-repeat center center;
     background-size: contain;
     position: absolute;
     z-index: 0;
