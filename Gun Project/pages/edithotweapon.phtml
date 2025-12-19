@@ -1,0 +1,20 @@
+<h1>Edit zbraně s ID číslo <?= $gun["id"] ?>, <?= $gun["name"] ?></h1>
+
+<form method="POST" enctype="multipart/form-data" class="form">
+    <label for="name">Název</label>
+    <input type="text" name="name" id="name" required value="<?= $gun["name"] ?>">
+    <br>
+    <label for="caliber">Ráže</label>
+    <input type="text" name="caliber" id="caliber" required value="<?= $gun["caliber"] ?>">
+    <br>
+    <label for="descript">Popis</label>
+    <textarea name="descript" id="descript" cols="30" rows="10" placeholder="Zde zadejte popis" required value="<?= $gun["descript"] ?>"></textarea>
+    <br>
+    <label for="rang">Úsťová rychlost (v m/s)</label>
+    <input type="number" name="rang" id="rang" required min="0" step="1" value="<?= $gun["rang"] ?>">
+    <br>
+    <label for="picture">Obrázek</label>
+    <input type="file" name="picture" id="picture" accept="image/*" required>
+    <br><br>
+    <button name="editButtonGun">Uložit</button>
+</form>
