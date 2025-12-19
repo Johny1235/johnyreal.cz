@@ -1,0 +1,15 @@
+<h2>Přidat střelnou zbraň</h2>
+
+<form method="POST" enctype="multipart/form-data" class="form">
+    <label for="name">Název zbraně</label>
+    <input type="text" name="name" id="name" required>
+    <label for="caliber">Ráže</label>
+    <input type="text" name="caliber" id="caliber" required>
+    <label for="descript">Popis</label>
+    <textarea name="descript" id="descript" cols="30" rows="10" placeholder="Zde zadejte popis" required></textarea>
+    <label for="rang">Úsťová rychlost (v m/s)</label>
+    <input type="number" name="rang" id="rang" min="0" step="1" required>
+    <label for="picture">Obrázek</label>
+    <input type="file" name="picture" id="picture" accept="image/*" required>
+    <button name="sendButtonHotWeapon">Přidat</button>
+</form>

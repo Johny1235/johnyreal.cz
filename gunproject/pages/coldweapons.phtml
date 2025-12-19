@@ -1,0 +1,77 @@
+<h1>Seznam chladných zbraní</h1>
+ 
+<?php if (isset($_SESSION["loggedUser"]) && ($_SESSION["loggedUser"]["isadmin"] ?? 0)) { ?>
+    <button class="button">
+        <a href="./addcoldweapon.php" class="add">Přidat chladnou zbraň<br></a>
+    </button>
+    <br><br>
+<?php } ?>
+
+<table border="2">
+    <thead>
+        <th>ID</th>
+        <th>Název</th>
+        <th>Materiál</th>
+        <th>Obrázek</th>
+        <?php if (isset($_SESSION["loggedUser"])) { ?>
+        <th>Podrobnosti</th>
+        <?php } ?>
+        <?php if (isset($_SESSION["loggedUser"]) && ($_SESSION["loggedUser"]["isadmin"] ?? 0)) { ?>
+        <th>Upravit</th>
+        <th>Odstranit</th>
+        <?php } ?>
+        <?php if (isset($_SESSION["loggedUser"])) { ?>
+        <th>Oblíbená?</th>
+        <?php } ?>
+    </thead>
+    <tbody>
+        <?php 
+            foreach ($weapons as $weapon) {
+        ?>
+            <tr>
+                <td><?= $weapon["id"] ?></td>
+                <td><?= $weapon["name"] ?></td>
+                <td><?= $weapon["material"] ?></td>
+                <td>
+                    <?php if (isset($weapon["picture"]) && !empty($weapon["picture"])) { ?>
+                        <img src="<?= $weapon["picture"] ?>" alt="Obrázek" height="100px">
+                    <?php } else { ?>
+                        Chyba!
+                    <?php } ?>
+                </td>
+                <?php if (isset($_SESSION["loggedUser"])) { ?>
+                <td>
+                    <a href="coldweapon_detail.php?id=<?= $weapon['id'] ?>"class="buttonshow">Zobrazit</a>
+                </td>
+                <?php } ?>
+                <?php if (isset($_SESSION["loggedUser"]) && ($_SESSION["loggedUser"]["isadmin"] ?? 0)) { ?>
+                <td>
+                    <form method="GET">
+                        <input type="hidden" name="edit" value="<?=$weapon["id"]?>">
+                        <button class="button">Upravit</button>
+                    </form>
+                </td>
+                <td>
+                    <form method="POST"> 
+                        <input type="hidden" name="id" value="<?=$weapon["id"]?>">   
+                        <button name="deleteWeapon" class="button">Odstranit</button>
+                    </form>    
+                </td>
+                <?php } ?>
+                <?php if (isset($_SESSION["loggedUser"])) { ?>
+                <td>
+                    <form method="POST" action="./add_favorite.php" style="display:inline;">
+                        <input type="hidden" name="weapon_name" value="<?= htmlspecialchars($weapon['name']) ?>">
+                        <input type="hidden" name="weapon_type" value="cold">
+                        <button type="submit" class="buttonshow">
+                            ❤ Oblíbené
+                        </button>
+                    </form>
+                </td>
+                <?php } ?>
+            </tr>
+        <?php
+            }
+        ?>
+    </tbody>
+</table>

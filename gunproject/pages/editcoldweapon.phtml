@@ -1,0 +1,17 @@
+<h1>Edit zbraně s ID číslo <?= $weapon["id"] ?>, <?= $weapon["name"] ?></h1>
+
+<form method="POST" enctype="multipart/form-data" class="form">
+    <label for="name">Název</label>
+    <input type="text" name="name" id="name" required value="<?= $weapon["name"] ?>">
+    <br>
+    <label for="surname">Materiál</label>
+    <input type="text" name="material" id="material" required value="<?= $weapon["material"] ?>">
+    <br>
+    <label for="descript">Popis</label>
+    <textarea name="descript" id="descript" cols="30" rows="10" placeholder="Zde zadejte popis" required value="<?= $weapon["descript"] ?>"></textarea>
+    <br>
+    <label for="picture">Obrázek</label>
+    <input type="file" name="picture" id="picture" accept="image/*" required>
+    <br><br>
+    <button name="editButtonWeapon">Uložit</button>
+</form>
